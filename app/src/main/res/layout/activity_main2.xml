@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Main2Activity">
+
+    <EditText
+        android:id="@+id/etOfficeColor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Color"
+        android:textSize="12sp"/>
+    <EditText
+        android:id="@+id/etWindows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Windows"
+        android:textSize="12sp"/>
+
+    <EditText
+        android:id="@+id/etBathroom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Bathroom"
+        android:textSize="12sp"/>
+    <EditText
+        android:id="@+id/etFurniture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Furniture"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/tvOfficeColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Office Color"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvWindows"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Windows"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvBathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bathroom"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/tvFurniture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Furniture"
+        android:textSize="14sp"/>
+
+    <Button
+        android:id="@+id/btnGetOffice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Click for Office"
+        android:onClick="onClickActTwo"/>
+
+    <Button
+        android:id="@+id/btnGetOfficeDagger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Click for Office Dagger"
+        android:onClick="onClickActTwo"/>
+
+    <Button
+        android:id="@+id/btnGoToHomes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Go to Homes"
+        android:onClick="onClickActTwo"/>
+
+
+
+</LinearLayout>
