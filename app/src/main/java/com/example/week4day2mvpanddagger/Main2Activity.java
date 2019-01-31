@@ -11,10 +11,6 @@ import com.example.week4day2mvpanddagger.homeandoffice.Office;
 
 public class Main2Activity extends AppCompatActivity implements OfficeContract{
     OfficePresenter officePresenter;
-    TextView tvFurniture;
-    TextView tvWindows;
-    TextView tvBathroom;
-    TextView tvColor;
     EditText etFurniture;
     EditText etWindows;
     EditText etBathroom;
@@ -28,10 +24,6 @@ public class Main2Activity extends AppCompatActivity implements OfficeContract{
     }
 
     private void bindViews(){
-        tvFurniture =findViewById(R.id.tvFurniture);
-        tvWindows =findViewById(R.id.tvWindows);
-        tvBathroom =findViewById(R.id.tvBathroom);
-        tvColor =findViewById(R.id.tvOfficeColor);
         etBathroom = findViewById(R.id.etBathroom);
         etColor = findViewById(R.id.etOfficeColor);
         etWindows = findViewById(R.id.etWindows);
@@ -45,9 +37,6 @@ public class Main2Activity extends AppCompatActivity implements OfficeContract{
                 officePresenter.getOffice( etColor.getText().toString(),etFurniture.getText()
                         .toString(), etWindows.getText().toString(), etBathroom.getText().toString());
                 break;
-            case R.id.btnGetOfficeDagger:
-                officePresenter.getOfficeDagger();
-                break;
             case R.id.btnGoToHomes:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
@@ -58,10 +47,9 @@ public class Main2Activity extends AppCompatActivity implements OfficeContract{
     @Override
     public void passOffice(Office office) {
         if(office != null){
-            tvBathroom.setText(office.getBathroom());
-            tvColor.setText(office.getColor());
-            tvFurniture.setText(office.getFurniture());
-            tvWindows.setText(office.getWindows());
+            Intent intent = new Intent(this, Main4Activity.class);
+            intent.putExtra("Office_Value", office);
+            startActivity(intent);
         }
     }
 }

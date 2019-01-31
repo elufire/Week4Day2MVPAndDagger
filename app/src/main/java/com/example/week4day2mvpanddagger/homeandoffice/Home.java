@@ -1,10 +1,17 @@
 package com.example.week4day2mvpanddagger.homeandoffice;
 
-public class Home {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class Home implements Parcelable {
     String rooms;
     String color;
     String address;
     String pool;
+
+    public Home(){
+
+    }
 
     public Home(String rooms, String color, String address, String pool) {
         this.rooms = rooms;
@@ -12,6 +19,25 @@ public class Home {
         this.address = address;
         this.pool = pool;
     }
+
+    protected Home(Parcel in) {
+        rooms = in.readString();
+        color = in.readString();
+        address = in.readString();
+        pool = in.readString();
+    }
+
+    public static final Creator<Home> CREATOR = new Creator<Home>() {
+        @Override
+        public Home createFromParcel(Parcel in) {
+            return new Home(in);
+        }
+
+        @Override
+        public Home[] newArray(int size) {
+            return new Home[size];
+        }
+    };
 
     public String getRooms() {
         return rooms;
@@ -43,5 +69,18 @@ public class Home {
 
     public void setPool(String pool) {
         this.pool = pool;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(rooms);
+        dest.writeString(color);
+        dest.writeString(address);
+        dest.writeString(pool);
     }
 }

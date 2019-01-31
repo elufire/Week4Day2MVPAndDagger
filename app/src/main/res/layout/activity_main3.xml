@@ -4,8 +4,59 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Main3Activity">
 
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Home Display"
+        android:textSize="24sp"/>
+
+
+    <TextView
+        android:id="@+id/tvAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tvColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Color"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tvRooms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Rooms"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tvPool"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Pool"
+        android:textSize="18sp"/>
+
+    <Button
+        android:id="@+id/btnMakeNewHomes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Homes Input"
+        android:textSize="20sp"
+        android:onClick="onClick"/>
+
+    <Button
+        android:id="@+id/btnMakeNewOffice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Office Input"
+        android:textSize="20sp"
+        android:onClick="onClick"/>
 
 </LinearLayout>

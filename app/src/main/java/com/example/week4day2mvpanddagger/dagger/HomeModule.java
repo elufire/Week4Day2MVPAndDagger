@@ -12,6 +12,6 @@ public class HomeModule {
 
     @Provides
     Home getHome(){
-        return new Home("5", "red", "Montwood", "true");
+        return new Home();
     }
 }

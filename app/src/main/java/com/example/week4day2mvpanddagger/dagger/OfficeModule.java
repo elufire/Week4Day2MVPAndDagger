@@ -10,6 +10,6 @@ public class OfficeModule {
 
     @Provides
     Office getOffice(){
-        return new Office("Blue", "Desk and Recliner", "2", "Half Bathroom");
+        return new Office();
     }
 }

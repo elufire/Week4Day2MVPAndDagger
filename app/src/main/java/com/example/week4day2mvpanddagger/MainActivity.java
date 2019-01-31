@@ -11,10 +11,6 @@ import com.example.week4day2mvpanddagger.homeandoffice.Home;
 
 public class MainActivity extends AppCompatActivity implements HomeContract{
     HomePresenter homePresenter;
-    TextView tvRooms;
-    TextView tvPool;
-    TextView tvAddress;
-    TextView tvColor;
     EditText etRooms;
     EditText etPool;
     EditText etAddress;
@@ -28,10 +24,6 @@ public class MainActivity extends AppCompatActivity implements HomeContract{
     }
 
     private void bindViews(){
-        tvRooms =findViewById(R.id.tvRooms);
-        tvPool =findViewById(R.id.tvPool);
-        tvAddress =findViewById(R.id.tvAddress);
-        tvColor =findViewById(R.id.tvColor);
         etAddress = findViewById(R.id.etAddress);
         etColor = findViewById(R.id.etColor);
         etPool = findViewById(R.id.etPool);
@@ -44,9 +36,6 @@ public class MainActivity extends AppCompatActivity implements HomeContract{
             case R.id.btnHome:
                 homePresenter.getHome(etRooms.getText().toString(), etColor.getText().toString(), etAddress.getText().toString(), etPool.getText().toString());
                 break;
-            case R.id.btnHomeDagger:
-                homePresenter.getHomeDagger();
-                break;
                 case R.id.btnActivityTwo:
                     Intent intent = new Intent(this, Main2Activity.class);
                     startActivity(intent);
@@ -58,10 +47,9 @@ public class MainActivity extends AppCompatActivity implements HomeContract{
     @Override
     public void passHome(Home home) {
         if(home != null){
-            tvAddress.setText(home.getAddress());
-            tvColor.setText(home.getColor());
-            tvRooms.setText(home.getRooms());
-            tvPool.setText(home.getPool());
+            Intent intent = new Intent(this, Main3Activity.class);
+            intent.putExtra("Home_Value", home);
+            startActivity(intent);
         }
     }
 }

@@ -5,57 +5,56 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".Main4Activity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Home Input"
+        android:text="Office Display"
         android:textSize="24sp"/>
 
-    <EditText
-        android:id="@+id/etAddress"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvOfficeColor"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Address"
-        android:textSize="12sp"/>
-    <EditText
-        android:id="@+id/etColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Color"
-        android:textSize="12sp"/>
+        android:hint="Office Color"
+        android:textSize="18sp"/>
 
-    <EditText
-        android:id="@+id/etRooms"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvWindows"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Rooms"
-        android:textSize="12sp"/>
-    <EditText
-        android:id="@+id/etPool"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Pool"
-        android:textSize="12sp"/>
+        android:hint="Windows"
+        android:textSize="18sp"/>
 
+    <TextView
+        android:id="@+id/tvBathroom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Bathroom"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/tvFurniture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Furniture"
+        android:textSize="18sp"/>
 
     <Button
-        android:id="@+id/btnHome"
+        android:id="@+id/btnMakeHomes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Go to Homes Input"
         android:textSize="20sp"
-        android:text="Click for home"
         android:onClick="onClick"/>
 
     <Button
-        android:id="@+id/btnActivityTwo"
+        android:id="@+id/btnMakeOffice"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="Go to Office Input"
         android:textSize="20sp"
-        android:text="Click for Offices"
         android:onClick="onClick"/>
-
-
 
 </LinearLayout>

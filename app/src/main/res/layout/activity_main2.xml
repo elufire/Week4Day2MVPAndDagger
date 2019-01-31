@@ -7,6 +7,12 @@
     android:orientation="vertical"
     tools:context=".Main2Activity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Office Input"
+        android:textSize="24sp"/>
+
     <EditText
         android:id="@+id/etOfficeColor"
         android:layout_width="match_parent"
@@ -33,33 +39,7 @@
         android:hint="Furniture"
         android:textSize="12sp"/>
 
-    <TextView
-        android:id="@+id/tvOfficeColor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Office Color"
-        android:textSize="14sp"/>
 
-    <TextView
-        android:id="@+id/tvWindows"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Windows"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:id="@+id/tvBathroom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Bathroom"
-        android:textSize="14sp"/>
-
-    <TextView
-        android:id="@+id/tvFurniture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Furniture"
-        android:textSize="14sp"/>
 
     <Button
         android:id="@+id/btnGetOffice"
@@ -69,13 +49,6 @@
         android:text="Click for Office"
         android:onClick="onClickActTwo"/>
 
-    <Button
-        android:id="@+id/btnGetOfficeDagger"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:text="Click for Office Dagger"
-        android:onClick="onClickActTwo"/>
 
     <Button
         android:id="@+id/btnGoToHomes"
